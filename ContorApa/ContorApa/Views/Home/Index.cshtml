@@ -1,0 +1,22 @@
+﻿@model HomeViewModel
+
+<label>Total cald: </label>@Model.TotalHot -
+<label>Total rece: </label>@Model.TotalCold
+@foreach (var index in Model.ContorIndexes)
+{
+    <table class="table-bordered col-lg-12">
+        <tr>
+            <td>
+                <div class="col-lg-6">
+                    <h3>@index.Anul @index.Luna <a asp-controller="Home" asp-action="Details" asp-route-id="@index.Id" class="btn btn-info">Editare</a></h3>
+
+                    <h5>Bucatarie Cald: @index.BucatarieCald</h5>
+                    <h5>Bucatarie Rece: @index.BucatarieRece</h5>
+                    <h5>Baie Cald: @index.BaieCald</h5>
+                    <h5>Baie Rece: @index.BaieRece</h5>
+                    <br />
+                </div>
+            </td>
+        </tr>
+    </table>
+}

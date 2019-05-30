@@ -1,0 +1,63 @@
+﻿@model ContorIndex
+@{
+    Layout = "_LayoutNoTotal";
+}
+    <form asp-action="AddIndex" method="post" role="form">
+        <div class="form-group">
+            <label asp-for="BucatarieCald">Bucatarie Cald</label>
+            <div>
+                <input asp-for="BucatarieCald" class="form-control" />
+                @Html.ValidationMessageFor(model => model.BucatarieCald)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BucatarieRece">Bucatarie Rece</label>
+            <div>
+                <input asp-for="BucatarieRece" class="form-control" />
+                @Html.ValidationMessageFor(model => model.BucatarieRece)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BaieCald">Baie Cald</label>
+            <div>
+                <input asp-for="BaieCald" class="form-control" />
+                @Html.ValidationMessageFor(model => model.BaieCald)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BaieRece">Baie Rece</label>
+            <div>
+                <input asp-for="BaieRece" class="form-control" />
+                @Html.ValidationMessageFor(model => model.BaieRece)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Anul"></label>
+            <div>
+                <input asp-for="Anul" class="form-control" value="@DateTime.UtcNow.ToString("yyyy")" />
+                @Html.ValidationMessageFor(model => model.Anul)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Luna"></label>
+            <div>
+                <input asp-for="Luna" class="form-control" value="@DateTime.UtcNow.ToString("MMM")" />
+                @Html.ValidationMessageFor(model => model.Luna)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DataInregistrarii">Data inregistrarii</label>
+            <div>
+                <input asp-for="DataInregistrarii" class="form-control" value="@DateTime.UtcNow.ToString("yyyy-MM-ddThh:mm:ss")" readonly />
+                @Html.ValidationMessageFor(model => model.DataInregistrarii)
+            </div>
+        </div>
+
+        <input type="submit" value="Salveaza" />
+    </form>

@@ -1,0 +1,23 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container body-content">
+        <a asp-controller="Home" asp-action="Index">HOME</a> -
+        <a asp-controller="CRUDIndex" asp-action="Index">Adauga index nou</a>
+        
+        <br />
+        <br />
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>
